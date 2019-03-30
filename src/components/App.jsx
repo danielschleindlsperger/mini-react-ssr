@@ -1,19 +1,18 @@
-import React from 'react'
-import { Counter } from './counter'
+import React, { useState } from 'react'
+import { Button, Headline } from './atoms'
 
-export const App = ({ initialCount }) => (
-  <div>
-    <h1>You are amazing!</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, deserunt.
-      Quam esse, praesentium saepe earum doloribus totam adipisci cupiditate ex?
-    </p>
+export const App = () => {
+  const [isHappy, setHappiness] = useState(false)
+
+  return (
     <div>
-      <Counter initialCount={initialCount} />
+      <Headline>You are amazing!</Headline>
+      <Button
+        data-testid="happiness-button"
+        onClick={() => setHappiness(!isHappy)}
+      >
+        {isHappy ? '🤗' : '😞'}
+      </Button>
     </div>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, deserunt.
-      Quam esse, praesentium saepe earum doloribus totam adipisci cupiditate ex?
-    </p>
-  </div>
-)
+  )
+}

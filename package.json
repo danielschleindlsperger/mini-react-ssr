@@ -1,5 +1,5 @@
 {
-  "name": "react-selective-hydration",
+  "name": "mini-react-ssr",
   "version": "0.0.1",
   "description": "Minimalist setup for server-side rendering of React components (that also run on the client!)",
   "main": "src/index.js",
